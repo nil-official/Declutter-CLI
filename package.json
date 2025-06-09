@@ -1,0 +1,39 @@
+{
+    "name": "declutter-cli",
+    "version": "1.0.0",
+    "description": "A CLI tool to organize and declutter folders by grouping files into categorized subdirectories",
+    "main": "index.js",
+    "bin": {
+        "declutter": "./bin/declutter.js"
+    },
+    "scripts": {
+        "start": "node bin/declutter.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "cli",
+        "file-organization",
+        "declutter",
+        "folder-organizer",
+        "file-manager"
+    ],
+    "author": "Niladri Chakraborty",
+    "license": "MIT",
+    "dependencies": {
+        "commander": "^11.1.0",
+        "chalk": "^4.1.2",
+        "ora": "^5.4.1",
+        "inquirer": "^8.2.6"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nil-official/Declutter-CLI.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nil-official/Declutter-CLI/issues"
+    },
+    "homepage": "https://github.com/nil-official/Declutter-CLI#readme"
+}
