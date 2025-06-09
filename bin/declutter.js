@@ -150,7 +150,7 @@ async function declutterFolder(targetPath, options = {}) {
         const files = await getFilesInDirectory(targetPath);
 
         if (files.length === 0) {
-            spinner.succeed(chalk.yellow('No files found to organize!'));
+            spinner.succeed(chalk.yellow(' No files found to organize!'));
             return;
         }
 
@@ -169,13 +169,13 @@ async function declutterFolder(targetPath, options = {}) {
             totalFiles++;
         }
 
-        spinner.succeed(chalk.green(`Categorized ${totalFiles} files into ${Object.keys(filesByCategory).length} categories`));
+        spinner.succeed(chalk.green(` Categorized ${totalFiles} files into ${Object.keys(filesByCategory).length} categories`));
 
         // Show preview if not in quiet mode
         if (!options.quiet) {
             console.log(chalk.cyan('\n📁 File organization preview:'));
             for (const [category, categoryFiles] of Object.entries(filesByCategory)) {
-                console.log(chalk.blue(`  ${category}: ${categoryFiles.length} files`));
+                console.log(chalk.blue(`    ${category}: ${categoryFiles.length} files`));
             }
 
             if (!options.force) {
@@ -232,17 +232,17 @@ async function declutterFolder(targetPath, options = {}) {
             }
         }
 
-        moveSpinner.succeed(chalk.green(`✨ Successfully organized ${movedCount} files!`));
+        moveSpinner.succeed(chalk.green(` Successfully organized ${movedCount} files!`));
 
         if (errorCount > 0) {
-            console.log(chalk.red(`⚠️  ${errorCount} files could not be moved.`));
+            console.log(chalk.red(`⚠️ ${errorCount} files could not be moved.`));
         }
 
         console.log(chalk.cyan(`\n📊 Summary:`));
-        console.log(chalk.green(`  ✅ Files organized: ${movedCount}`));
-        console.log(chalk.blue(`  📁 Folders created: ${Object.keys(filesByCategory).length}`));
+        console.log(chalk.green(`    Files organized: ${movedCount}`));
+        console.log(chalk.blue(`    Folders created: ${Object.keys(filesByCategory).length}`));
         if (errorCount > 0) {
-            console.log(chalk.red(`  ❌ Errors: ${errorCount}`));
+            console.log(chalk.red(`    Errors: ${errorCount}`));
         }
 
     } catch (error) {
