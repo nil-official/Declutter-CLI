@@ -2,7 +2,7 @@
     "name": "declutter-cli",
     "version": "1.0.0",
     "description": "A CLI tool to organize and declutter folders by grouping files into categorized subdirectories",
-    "main": "index.js",
+    "main": "src/index.js",
     "bin": {
         "declutter": "./bin/declutter.js"
     },
@@ -12,22 +12,18 @@
     },
     "keywords": [
         "cli",
-        "file-organization",
+        "command-line",
         "declutter",
+        "productivity",
+        "organization",
+        "file-manager",
+        "file-management",
         "folder-organizer",
-        "file-manager"
+        "file-organization",
+        "nodejs"
     ],
-    "author": "Niladri Chakraborty",
+    "author": "Niladri Chakraborty <ping.niladri@gmail.com>",
     "license": "MIT",
-    "dependencies": {
-        "commander": "^11.1.0",
-        "chalk": "^4.1.2",
-        "ora": "^5.4.1",
-        "inquirer": "^8.2.6"
-    },
-    "engines": {
-        "node": ">=14.0.0"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/nil-official/Declutter-CLI.git"
@@ -35,5 +31,21 @@
     "bugs": {
         "url": "https://github.com/nil-official/Declutter-CLI/issues"
     },
-    "homepage": "https://github.com/nil-official/Declutter-CLI#readme"
+    "homepage": "https://github.com/nil-official/Declutter-CLI#readme",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "cli-progress": "^3.12.0",
+        "commander": "^11.1.0",
+        "inquirer": "^8.2.6",
+        "ora": "^5.4.1"
+    },
+    "files": [
+        "bin/",
+        "src/",
+        "README.md",
+        "LICENSE"
+    ]
 }
